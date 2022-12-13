@@ -23,7 +23,7 @@
         <label for="message" class="form-label">Message:</label>
         <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Write something..." rows="3"></textarea>
       </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
+      <button type="submit" class="btn btn-dark" v-on:click='thanks'>Submit</button>
   </div>
 </form>
     </div>
@@ -31,7 +31,15 @@
 <script>
 export default {
   name: 'Contact',
+  methods: {
+          thanks: function(event){
+              event.preventDefault();
+              alert('Hello there');
+          }
+      }
 }
+
+
 </script>
 <style>
     
